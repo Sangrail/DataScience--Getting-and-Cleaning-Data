@@ -20,5 +20,8 @@ The attached R script (run_analysis.R) performs the following to clean up the da
 * Merges the training and test sets to create one data set, namely train/X_train.txt with test/X_test.txt, the result of which is a 10299x561 data frame.
 
 * Reads features.txt and extracts only the measurements on the mean and standard deviation for each measurement.
+* 
+* Aggregate the merged data set, by the activity classification (walking, etc...), the subject ID and export to a file called, Tidy.txt.
+
 
 * Reads activity_labels.txt and applies descriptive activity names to name the activities in the data set: walking, walkingupstairs, walkingdownstairs, sitting, standing, laying
