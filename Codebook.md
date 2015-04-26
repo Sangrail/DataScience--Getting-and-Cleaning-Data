@@ -23,4 +23,4 @@ The attached R script (run_analysis.R) performs the following to clean up the da
 
 * Reads activity_labels.txt and applies descriptive activity names to name the activities in the data set: walking, walkingupstairs, walkingdownstairs, sitting, standing, laying
 
-* Aggregate the merged data set, by the activity classification (walking, etc...), the subject ID and export to a file called, Tidy.txt.
+* Aggregate the merged data set, by the activity classification (walking, etc...) and the subject ID and export to a file called, Tidy.txt.
