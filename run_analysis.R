@@ -91,10 +91,11 @@ mergedDataSet <- cbind(Subjects, Ydata, Xdata)
 write.csv(mergedDataSet, "mergedDataSet.txt")
 
 ##  5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-tidy <- aggregate(mergedDataSet, by=list(activity=mergedDataSet$activityClassification, subject=mergedDataSet$subject), mean)
-write.table(tidy, "tidy.txt", row.names=FALSE)
+#Could not get the following to work
+#tidy <- aggregate(mergedDataSet, by=list(activity=mergedDataSet$activityClassification, subject=mergedDataSet$subject), mean)
+#write.table(tidy, "tidy.txt", row.names=FALSE)
 
-##  5a Alternative way of doing the aggregation
+##  5a Alternative way of doing the aggregation - AKA the long way
 numCols = dim(mergedDataSet)[2]
 numSubjects = length(unique(Subjects)[,1])
 numActivities = length(activities[,1])
