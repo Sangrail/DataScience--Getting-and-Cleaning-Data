@@ -21,6 +21,29 @@ Data Source:
 ==================
 The data source can be downloaded from the following URL: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
+Using the following:
+<pre>
+downloadfile <- function(){
+  library(httr)
+  url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip";
+  zipFile <- "HAR_Dataset.zip";
+  if(!file.exists(zipFile)){
+      download.file(url, zipFile, method="curl");
+  }
+  
+  dataDir <- "UCI HAR Dataset";
+  
+  if(!file.exists(dataDir)) 
+  { 
+      unzip(zipFile, exdir = ".") 
+  }
+  
+  dataDir
+}
+
+#downloadfile(); 
+</pre>
+
 Feature Selection 
 ==================
 
